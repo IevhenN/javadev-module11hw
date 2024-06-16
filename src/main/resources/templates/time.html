@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Time</title>
+</head>
+<body>
+<h1>Current Time: <span th:text="${currentTime}"></span></h1>
+
+<form action="/time" method="get">
+    <label for="timezone">Enter a time zone:</label>
+    <input type="text" id="timezone" name="timezone" th:value="${timezone}">
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
